@@ -32,7 +32,7 @@ export default function Dashboard() {
     const fetchRepos = async () => {
       try {
         const res = await axios.get<RepoRes[]>(
-          `https://52.66.237.207:8080/repo/user/${userId}`,
+          `http://65.2.122.179:8080/repo/user/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -48,7 +48,7 @@ export default function Dashboard() {
     const fetchSuggesRepos = async () => {
       try {
         const res = await axios.get<RepoRes[]>(
-          `https://52.66.237.207:8080/repo/all`,
+          `http://65.2.122.179:8080/repo/all`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -83,7 +83,7 @@ export default function Dashboard() {
       setStarringRepo(repoId);
 
       const res = await axios.post(
-        `https://52.66.237.207:8080/repo/${repoId}/star`,
+        `http://65.2.122.179:8080/repo/${repoId}/star`,
         {},
         {
           headers: {

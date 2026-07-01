@@ -39,7 +39,7 @@ export default function RepoDetails() {
     const fetchRepo = async () => {
       try {
         const res = await axios.get(
-          `https://52.66.237.207:8080/repo/id/${repoId}`,
+          `http://65.2.122.179:8080/repo/id/${repoId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -71,7 +71,7 @@ export default function RepoDetails() {
       setStarringRepo(repoId);
 
       const res = await axios.post(
-        `https://52.66.237.207:8080/repo/${repoId}/star`,
+        `http://65.2.122.179:8080/repo/${repoId}/star`,
         {},
         {
           headers: {
