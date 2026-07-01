@@ -38,11 +38,14 @@ export default function RepoDetails() {
   useEffect(() => {
     const fetchRepo = async () => {
       try {
-        const res = await axios.get(`52.66.237.207:8080/repo/id/${repoId}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
+        const res = await axios.get(
+          `https://52.66.237.207:8080/repo/id/${repoId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           },
-        });
+        );
 
         setRepo(res.data);
       } catch (error) {
@@ -68,7 +71,7 @@ export default function RepoDetails() {
       setStarringRepo(repoId);
 
       const res = await axios.post(
-        `52.66.237.207:8080/repo/${repoId}/star`,
+        `https://52.66.237.207:8080/repo/${repoId}/star`,
         {},
         {
           headers: {

@@ -30,7 +30,7 @@ export default function StarredRepos() {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("52.66.237.207:8080/repo/starred", {
+      const res = await axios.get("https://52.66.237.207:8080/repo/starred", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

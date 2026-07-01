@@ -43,10 +43,13 @@ export default function Signup() {
 
     try {
       setLoading(true);
-      const res = await axios.post<LoginResponse>("52.66.237.207:8080/login", {
-        password: formData.password,
-        email: formData.email,
-      });
+      const res = await axios.post<LoginResponse>(
+        "https://52.66.237.207:8080/login",
+        {
+          password: formData.password,
+          email: formData.email,
+        },
+      );
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("userId", res.data.userId);

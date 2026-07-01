@@ -32,7 +32,7 @@ export default function Dashboard() {
     const fetchRepos = async () => {
       try {
         const res = await axios.get<RepoRes[]>(
-          `52.66.237.207:8080/repo/user/${userId}`,
+          `https://52.66.237.207:8080/repo/user/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -47,11 +47,14 @@ export default function Dashboard() {
 
     const fetchSuggesRepos = async () => {
       try {
-        const res = await axios.get<RepoRes[]>(`52.66.237.207:8080/repo/all`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
+        const res = await axios.get<RepoRes[]>(
+          `https://52.66.237.207:8080/repo/all`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           },
-        });
+        );
         setSuggesRepo(res.data);
       } catch (error) {
         console.error("Error while fetching the Repositories", error);
@@ -80,7 +83,7 @@ export default function Dashboard() {
       setStarringRepo(repoId);
 
       const res = await axios.post(
-        `52.66.237.207:8080/repo/${repoId}/star`,
+        `https://52.66.237.207:8080/repo/${repoId}/star`,
         {},
         {
           headers: {

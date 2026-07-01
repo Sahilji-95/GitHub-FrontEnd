@@ -19,7 +19,7 @@ export default function Profile() {
       try {
         const token = localStorage.getItem("token");
 
-        const res = await axios.get<User>("52.66.237.207:8080/me", {
+        const res = await axios.get<User>("https://52.66.237.207:8080/me", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

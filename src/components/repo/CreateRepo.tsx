@@ -40,7 +40,7 @@ const CreateRepo: React.FC<CreateRepositoryFormProps> = ({
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "52.66.237.207:8080/repo/create",
+        "https://52.66.237.207:8080/repo/create",
         {
           name: form.name.trim(),
           description: form.description.trim(),
