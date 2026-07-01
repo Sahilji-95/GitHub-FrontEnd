@@ -119,7 +119,7 @@ export default function Signup() {
 
         <div className="pass-box">
           <p>
-            Don't have an account? <Link to="/Signup">Signup</Link>
+            Don't have an account? <Link to="/signup">Signup</Link>
           </p>
         </div>
       </div>
