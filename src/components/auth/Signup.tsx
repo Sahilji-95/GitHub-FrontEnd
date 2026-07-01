@@ -46,7 +46,7 @@ export default function Signup() {
     try {
       setLoading(true);
       const res = await axios.post<SignupResponse>(
-        "http://localhost:8080/signup",
+        "52.66.237.207:8080/signup",
         {
           email: formData.email,
           password: formData.password,

@@ -38,7 +38,7 @@ export default function RepoDetails() {
   useEffect(() => {
     const fetchRepo = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/repo/id/${repoId}`, {
+        const res = await axios.get(`52.66.237.207:8080/repo/id/${repoId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -68,7 +68,7 @@ export default function RepoDetails() {
       setStarringRepo(repoId);
 
       const res = await axios.post(
-        `http://localhost:8080/repo/${repoId}/star`,
+        `52.66.237.207:8080/repo/${repoId}/star`,
         {},
         {
           headers: {

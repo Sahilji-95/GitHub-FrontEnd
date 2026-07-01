@@ -40,7 +40,7 @@ const CreateIssue: React.FC<CreateIssueProps> = ({
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:8080/issue/create",
+        "52.66.237.207:8080/issue/create",
         {
           title: form.title.trim(),
           description: form.description.trim(),
